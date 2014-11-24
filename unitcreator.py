@@ -39,19 +39,38 @@ Current races:
     Orcs - incomplete
     Wolves - incomplete
     Fairies - missing
+
+TODO:
+    - Add more unit types.
+    - Create name lists.
+    - Actually finish making Unit creators
+
 """
 
-
-# This module will create units. It's pretty self explanatory.
-# The units it can create are as follows:
-#    Goblins
-#    Orcs
-#    Wolves
-
-# TODO: Add more unit types.    
-
-def spawnGoblins(number, level):
+def spawnGoblins(minNum, maxNum, minLevel, maxLevel):
+    f = open("names.txt", "r")
+    names = []
+    for i in f:
+        names.append(i[:-1])
+    f.close()
+    # DEBUG: Prints names
+    for i in names:
+        print i
     
+    # Stores the goblins,is returned to level creator.
     goblins = []
-    for i in range(number):
-        i = Goblin()
+    for i in range(minNum, maxNum):
+        # Name will be randomized, for now just imported from names.txt
+        name = random.choice(names)
+        health = random.gauss(80, 120)
+        attack = random.gauss(5, 15)
+        defense = random.gauss(5, 15)
+        speed = 3
+        gold = random.gauss(20, 60)
+        level = random.randrange(minLevel, maxLevel)
+        xp = 123
+        gob = Goblin(name, health, attack, defense, speed, gold, level, xp)
+        goblins.append(gob)
+    
+    return goblins
+    
