@@ -1,11 +1,9 @@
 pythonRPG
 =========
 
-This RPG will be a long-term project, growing in complexity and scale.
+This RPG will be a long-term project, growing in complexity and scale. It is intended for the Raspberry Pi, but should be playable on any system running Python 2.7.8. Eventually I want to add Python GPIO input and out put and make it a Raspberry Pi exclusive, complete with a DIY, GPIO-powered controller. in the mean time, it's just a simple text-based RPG coded purely in Python.
 
-As of yet, you require no modules that are not included  here or in the Python Standard Library.
-
-Eventually I would like to migrate the game over to C++, and make it an open source Ogre3D project. In the mean time, it will be written in pure Python.
+As of yet, you require no modules that are not included here or in the Python Standard Library.
 
 Please note:
 
