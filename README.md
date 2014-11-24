@@ -16,10 +16,10 @@ Instructions for Raspberry Pi (Raspbian) or any Debian-based Linux distro:
 
 In a terminal, run the following commands:
 
-    -wget https://github.com/b4ux1t3/pythonRPG/archive/master.zip
+    wget https://github.com/b4ux1t3/pythonRPG/archive/master.zip
     
-    -unzip master.zip
+    unzip master.zip
     
-    -cd pythonRPG-master
+    cd pythonRPG-master
     
-    -python unittest.py
+    python unittest.py
