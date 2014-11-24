@@ -31,7 +31,7 @@ All spawn functions will take at least four arguments, minNum, maxNum, minLevel,
 the minimum and maximum two ranges.
 
 For example:
-    spawnGoblins((2, 5), (4, 5)) would make anywhere from 2-to-5 goblins with levels of either 4 or 5.
+    spawnGoblins(2, 5, 4, 5) would make anywhere from 2-to-5 goblins with levels of either 4 or 5.
 
 Current races:
     Goblins - incomplete
@@ -43,6 +43,7 @@ Current races:
 TODO:
     - Add more unit types.
     - Create name lists.
+        - JSON name-parts, randomized and combined
     - Actually finish making Unit creators
 
 """
