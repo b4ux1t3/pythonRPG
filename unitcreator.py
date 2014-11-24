@@ -54,8 +54,8 @@ def spawnGoblins(minNum, maxNum, minLevel, maxLevel):
         names.append(i[:-1])
     f.close()
     # DEBUG: Prints names
-    for i in names:
-        print i
+    #for i in names:
+    #    print i
     
     # Stores the goblins,is returned to level creator.
     goblins = []
