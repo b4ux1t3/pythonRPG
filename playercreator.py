@@ -15,26 +15,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The player object and all its uniqueness (i.e. none) reside here.
+This module contains all the logic necessary to create a player character. It is very similar to unit creator. The only difference is that it let's the user adjust some parameters.
+"""
 
-This game is designed to have as little difference between how units behave as possible. As such, every unit in the game, from the player to the goblin king, has the same basic structure. The only difference in the player's case is that it is controllable. The player has no uniqe attacks or abilities, and can even be any of the races in the game.
-
-For now, though, the player is limited to goblin.
-
-TODO:
-    - Implement player race selection
-""" 
-
+from player import *
 from units import *
 
-class Player(Unit):
-    def __init__(self, name, race, health, attack, defense, speed, gold, level, xp):
-        
-        super(Player, self).__init__(name, health, attack, defense, speed, gold, level, xp)
-        
-        if race == "goblin":
-            self.inventory = {'pocket'}
-            self.equipped['boots']='worn boots'
-            
-    
-        
+def newCharacter(race, name):
+    pass

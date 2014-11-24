@@ -1,6 +1,3 @@
-from units import *
-import random
-
 """ 
 Copyright (c) 2014 Chris Pilcher
 
@@ -47,6 +44,8 @@ TODO:
     - Actually finish making Unit creators
 
 """
+from units import *
+import random
 
 def spawnGoblins(minNum, maxNum, minLevel, maxLevel):
     f = open("names.txt", "r")

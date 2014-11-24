@@ -1,5 +1,3 @@
-import random
-
 """
 Copyright (c) 2014 Chris Pilcher
 
@@ -19,20 +17,20 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 This module defines all the basic non-player units in the game. These are referred to as races. If it isn't here, it isn't implemented.
 
-The Player is also a Unit object, but is separated for readability's sake. 
-It is one of the most complex structures, and as such needs its own module.
+The Player is also a Unit object, but is separated for readability's sake. This means that every unit in the game, from the player to the Goblin King, has the same basic structure. Every unit in the game has it's own inventory, its own XP level, its own everything.
 
 Current races:
     Goblins - incomplete
     Trolls - missing
     Orcs - incomplete
-    Wolves - incomplete
+    Wolves - Possibly removed. Monster units may be different.
     Fairies - missing
         
 Races who have unique abilities will have them implemented in their class definitions instead of in the Attacks or Abilities modules.
 
 There is a second module for more complex units, essentially different "classes" using the same basic races.
 """
+import random
 
 #TODO: Implement missing/incomplete races
 
@@ -49,6 +47,23 @@ class Unit(object):
         self.inventory = {'backpack': [], 
                           'pocket'  : [], 
                           'boot'    : []}
+        self.equipped = {'head':[],
+                         'neck':[],
+                         'shoulders':[],
+                         'chest':[],
+                         'wrist':[],
+                         'legs':['pants'],
+                         'boots':[],
+                         'ring0':[],
+                         'ring1':[],
+                         'ring2':[],
+                         'ring3':[],
+                         'ring4':[],
+                         'ring5':[],
+                         'ring6':[],
+                         'ring7':[],
+                         'ring8':[],
+                         'ring9':[]}
         self.gold = gold
         self.level = level
         self.xp = xp
@@ -88,7 +103,9 @@ class Unit(object):
     def remove(self, storage, item):
         del self.inventory[storage][item]
 
-# Goblins are quick, stupid, and greedy. Low attack, high speed, extra gold, chance of spawning with items.     
+# Goblins are quick, stupid, and greedy. Low attack, high speed, extra gold, increased chance of spawning with items.
+# Goblins start with only pockets, will be able to pick up other methods of carrying items.
+# TODO: Implement storage. 
 class Goblin(Unit):
     
     def __init__(self, name, health, attack, defense, speed, gold, level, xp):
@@ -107,5 +124,8 @@ class Goblin(Unit):
 class Orc(Unit):
     pass
     
-class Wolf(Unit):
+class Faerie(Unit):
+    pass
+    
+class Troll(Unit):
     pass
