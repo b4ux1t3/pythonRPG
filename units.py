@@ -31,6 +31,7 @@ Races who have unique abilities will have them implemented in their class defini
 There is a second module for more complex units, essentially different "classes" using the same basic races.
 """
 import random
+from time import sleep
 
 #TODO: Implement missing/incomplete races
 
@@ -114,11 +115,15 @@ class Goblin(Unit):
         
     # This is a goblin-specific ability. It can steal items ONLY from a target's pocket.
     def pickpocket(self, target):
+        print "%s tries to pick %s's pocket!" % (self.name, target.name)
+        sleep(1)
         targetPocket = target.inventory['pocket']
         ppTarget = random.randrange(0, len(targetPocket))
         self.pickup(targetPocket[ppTarget])
         print "%s stole %s from %s!" % (self.name, targetPocket[ppTarget], target.name)
+        sleep(1)
         target.remove('pocket', ppTarget)
+        
         self.xp += 1
         
 class Orc(Unit):
