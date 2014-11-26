@@ -16,3 +16,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """
+import random
+
+# Sneak a peak in an opponent's inventory.
+def peak(target):
+    peak = []
+    slot = random.choice(target.inventory)
+    print slot
