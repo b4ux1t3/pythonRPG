@@ -18,8 +18,18 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 import random
 
+# This should always target a Unit object.
+# Todo: input validation
+class Ability(object):
+    __init__(self, cost, target):
+        self.cost = cost
+        self.target = target
+        
+    
 # Sneak a peak in an opponent's inventory.
+"""
 def peak(target):
     peak = []
     slot = random.choice(target.inventory)
     print slot
+"""
