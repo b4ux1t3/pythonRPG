@@ -1,4 +1,4 @@
-"""
+""" 
 Copyright (c) 2014 Chris Pilcher
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files 
@@ -15,32 +15,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+This module contains all the logic necessary to create a player character. It is very similar to unit creator. The only difference is that it let's the user adjust some parameters.
 """
-import random
-#from datetime import *
 
-# This class holds all the "universal" abilities.
-# Each ability has a unique identifer (ID), which only allows 
-# Todo:
-    # Add error handling and logging
-    
-class Ability(object):
-    def __init__(self, ID):
-        self.ID = ID
-        self.cost = 0
-        
-    
-    
-    # Sneak a peak in an opponent's inventory.
-    # peek's ID is 1
-    def peek(self, target):
-        # Makes sure the ability using this method is "peek".
-        if self.ID == 1:
-            peek = []
-            slot = random.randrange(0, len(target.inventory))
-            peek.append(slot)
-            print peek
-        else:
-            print "Error: Illegal ability call."
-            return "Error"
+from player import *
+from units import *
+
 

@@ -67,12 +67,6 @@ gob2.inventory['pocket'].append('a popsicle')
 
 # Adding "peek" to both their ability lists
 
-gob1.abilities.append(Ability(1))
-gob2.abilities.append(Ability(1))
-
-gob1.abilities[0].peek(gob2)
-gob2.abilities[0].peek(gob1)
-
 """
 # And here they go! Pickpocketing each other!
 gob2.pickpocket(gob1)

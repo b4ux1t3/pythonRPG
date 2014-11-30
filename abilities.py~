@@ -38,8 +38,7 @@ class Ability(object):
         if self.ID == 1:
             peek = []
             slot = random.randrange(0, len(target.inventory))
-            peek.append(slot)
-            print peek
+            print slot
         else:
             print "Error: Illegal ability call."
             return "Error"

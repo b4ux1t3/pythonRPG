@@ -45,7 +45,6 @@ TODO:
 
 """
 from units import *
-from abilities import *
 import random
 
 def spawnGoblins(minNum, maxNum, minLevel, maxLevel):
