@@ -20,7 +20,7 @@ import random
 #from datetime import *
 
 # This class holds all the "universal" abilities.
-# Each ability has a unique identifer (ID), which only allows 
+# Each ability has a unique identifer (ID)
 # Todo:
     # Add error handling and logging
     
